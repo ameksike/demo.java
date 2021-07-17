@@ -8,7 +8,6 @@ import ksike.springboot.app.model.Person;
 
 public interface PersonRepository extends CrudRepository<Person, Long> {
 
-  List<Person> findByLastName(String lastName);
+  public List<Person> findByLastName(String lastName);
 
-  Person findById(long id);
 }

@@ -5,25 +5,17 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import ksike.springboot.app.model.Person;
-import ksike.springboot.app.service.PersonService;
-/*
-import java.util.List;
-import ksike.springboot.app.model.Person;
-import ksike.springboot.app.repository.PersonRepository;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-*/
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import ksike.springboot.app.model.Person;
+import ksike.springboot.app.service.PersonService;
 
 // https://spring.io/guides/tutorials/rest/
 
@@ -40,60 +32,27 @@ class PersonController {
     return this.srvPerson.findAll();
   }
 
+  @GetMapping("/{id}")
+  ResponseEntity<?> select(@PathVariable Long id) {
+    Person obj = this.srvPerson.findById(id);
+    return new ResponseEntity<Person>(obj, HttpStatus.OK);
+  }
+
   @PostMapping("")
-  ResponseEntity<?> newPerson(@Validated @RequestBody Person entity) {
-      Person obj = this.srvPerson.save(entity);
-      return new ResponseEntity<Person>(obj, HttpStatus.CREATED);
+  ResponseEntity<?> insert(@Validated @RequestBody Person entity) {
+    Person obj = this.srvPerson.save(entity);
+    return new ResponseEntity<Person>(obj, HttpStatus.CREATED);
   }
 
+  @PutMapping("/{id}")
+  ResponseEntity<?> update(@Validated @RequestBody Person entity, @PathVariable Long id) {
+    Person obj = this.srvPerson.store(entity, id);
+    return new ResponseEntity<Person>(obj, HttpStatus.GONE);
+  }
 
+  @DeleteMapping("/{id}")
+  void delete(@PathVariable Long id) {
+    this.srvPerson.deleteById(id);
+  }
 
-  
-/*
-  PersonController(PersonRepository repository) {
-    this.repository = repository;
-  }
-*/
-/*
-  @GetMapping("/persons")
-  List<Person> all() {
-   // return repository.findAll();
-  }
-  // end::get-aggregate-root[]
-/*
-  @PostMapping("/Persons")
-  Person newPerson(@RequestBody Person newPerson) {
-   //return repository.save(newPerson);
-  }
-*/
-  // Single item
-  /*
-  @GetMapping("/Persons/{id}")
-  Person one(@PathVariable Long id) {
-    
-    return repository.findById(id)
-      .orElseThrow(() -> new PersonNotFoundException(id));
-  }
-*/
-/*
-  @PutMapping("/Persons/{id}")
-  Person replacePerson(@RequestBody Person newPerson, @PathVariable Long id) {
-    
-    return repository.findById(id)
-      .map(Person -> {
-        Person.set(newPerson.getName());
-        Person.setRole(newPerson.getRole());
-        return repository.save(Person);
-      })
-      .orElseGet(() -> {
-        newPerson.setId(id);
-        return repository.save(newPerson);
-      });
-  }
-**/
-/*
-  @DeleteMapping("/Persons/{id}")
-  void deletePerson(@PathVariable Long id) {
-    repository.deleteById(id);
-  }*/
 }

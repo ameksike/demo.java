@@ -45,7 +45,7 @@ public class Person {
     return Objects.equals(this.id, obj.id) && Objects.equals(this.firstName, obj.firstName)
         && Objects.equals(this.lastName, obj.lastName);
   }
-
+  
   public Long getId() {
     return id;
   }
