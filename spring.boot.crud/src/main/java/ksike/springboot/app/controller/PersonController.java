@@ -17,8 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 import ksike.springboot.app.model.Person;
 import ksike.springboot.app.service.PersonService;
 
-// https://spring.io/guides/tutorials/rest/
-
 @RestController
 @RequestMapping("/api/person")
 @CrossOrigin
