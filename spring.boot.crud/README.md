@@ -1,5 +1,7 @@
 # Getting Started
-- [Start Spring-Boot](https://spring.io/projects/spring-boot)
+- [Getting Started](https://spring.io/projects/spring-boot)
+- [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service)
+- [Start Spring-Boot](https://start.spring.io/)
 
 ### Reference Documentation
 For further reference, please consider the following sections:
