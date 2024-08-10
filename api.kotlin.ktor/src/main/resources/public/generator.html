@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<!-- saved from url=(0255)https://start.ktor.io/final?name=ktor&website=com.example&artifact=com.api.kotlin.ktor&kotlinVersion=2.0.10&ktorVersion=2.3.12&buildSystem=GRADLE_KTS&engine=NETTY&configurationIn=CODE&addSampleCode=true&plugins=content-negotiation%2Crouting%2Cktor-jackson -->
+<html lang="en" data-lt-installed="true">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="https://start.ktor.io/icons/icon.svg" type="image/svg+xml" sizes="any">
+    <link rel="icon" href="https://start.ktor.io/icons/icon57x57.png" type="image/png" sizes="57x57">
+    <link rel="icon" href="https://start.ktor.io/icons/icon180x180.png" type="image/png" sizes="180x180">
+    <link rel="apple-touch-icon" href="https://start.ktor.io/icons/icon180x180.png" type="image/png" sizes="180x180">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link rel="canonical" href="https://start.ktor.io/">
+    <meta property="og:url" content="https://start.ktor.io/">
+    <meta property="twitter:url" content="https://start.ktor.io/">
+    <meta property="og:type" content="website">
+    <meta property="twitter:card" content="summary_large_image">
+    <title>Ktor: Project Generator</title>
+    <meta name="title" content="Ktor: Project generator">
+    <meta name="application-name" content="Ktor: Project Generator">
+    <meta name="apple-mobile-web-app-title" content="Ktor: Project Generator">
+    <meta property="twitter:title" content="Ktor: Project Generator">
+    <meta name="description" content="Create a custom Ktor project from our library of plugins.">
+    <meta property="twitter:description" content="Create a custom Ktor project from our library of plugins.">
+    <meta property="og:image" content="https://start.ktor.io/images/LinkPreviewImage.png">
+    <meta property="twitter:image" content="https://start.ktor.io/images/LinkPreviewImage.png">
+    <link href="./generator_files/main.870952e4.css" rel="stylesheet">
+</head>
+
+<body class="">
+    <div id="root">
+        <div id="kt-gen1" class="ktor-project-generator light">
+            <div class="ktor-page-header__wrapper">
+                <header class="ktor-page-header">
+                    <div><a href="https://ktor.io/" class="ktor-page-header__logo"><svg viewBox="0 0 48 48">
+                                <lineargradient id="a" gradientUnits="userSpaceOnUse" x1="1" x2="31" y1="17" y2="47">
+                                    <stop offset="0" stop-color="#6b57ff"></stop>
+                                    <stop offset=".5" stop-color="#ff45ed"></stop>
+                                    <stop offset="1" stop-color="#dd1265"></stop>
+                                </lineargradient>
+                                <path d="M0 16 L16 0 L48 32 L32 48z" fill="url(#a)"></path>
+                                <path fill="#27282C" d="M32 16 H16 v16 h16z"></path>
+                            </svg>
+                            <h1 class="rs-h3 rs-h3_theme_light">Ktor</h1>
+                        </a></div>
+                    <nav class="rs-text-1 rs-text-1_theme_light"><a class="selected-page">Create</a><a
+                            href="https://ktor.io/docs/welcome.html">Docs</a><a
+                            href="https://ktor.io/support">Support</a><a href="https://github.com/ktorio/ktor"
+                            target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24"
+                                class="_icon_1lgbkjk_3 _sizeM_1lgbkjk_17">
+                                <path
+                                    d="M9.32 20.698a.293.293 0 00.284-.042.31.31 0 00.119-.266v-1.75a3.86 3.86 0 01-1.91 0 1.858 1.858 0 01-1.207-1.234 1.74 1.74 0 00-.805-1.029 1.026 1.026 0 01-.503-.617s.1-.308.604-.206c.502.103.905.515 1.407 1.338a1.924 1.924 0 002.213.514c.002-.244.036-.485.1-.72.06-.245.202-.463.402-.617a3.863 3.863 0 01-3.921-3.497 4.262 4.262 0 01.905-3.6 2.885 2.885 0 01.2-2.469h.101c.842.09 1.642.41 2.313.926a8.086 8.086 0 014.425 0 7.19 7.19 0 012.413-.926 2.996 2.996 0 01.201 2.469 4.434 4.434 0 01.905 3.6 3.784 3.784 0 01-3.921 3.497 1.648 1.648 0 01.502 1.234v3.086a.404.404 0 00.247.382c.05.02.102.03.156.03a9.17 9.17 0 006.435-8.846 9.102 9.102 0 00-9-9.155 9.103 9.103 0 00-9 9.155 9.05 9.05 0 006.336 8.742z">
+                                </path>
+                            </svg></a><a href="https://twitter.com/jetbrainsktor" target="_blank" rel="noreferrer"><svg
+                                viewBox="0 0 24 24" class="_icon_1lgbkjk_3 _sizeM_1lgbkjk_17">
+                                <path
+                                    d="M17.09 4h2.715l-5.93 6.777L20.851 20H15.39l-4.278-5.593L6.216 20H3.5l6.342-7.25L3.15 4h5.601l3.867 5.113L17.091 4zm-.952 14.375h1.504L7.934 5.54H6.32l9.818 12.836z">
+                                </path>
+                            </svg></a><a href="https://blog.jetbrains.com/ktor/" target="_blank" rel="noreferrer"><svg
+                                viewBox="0 0 24 24" class="_icon_1lgbkjk_3 _sizeM_1lgbkjk_17">
+                                <path
+                                    d="M3 9.026h4L21 4v14.9l-6.01-2.111C14.702 18.783 13.014 19.98 11 20a4.012 4.012 0 01-4-4v-2H3V9.026zM11 18c1.105 0 1.996-.7 1.996-1.805v-.1L9 14.7V16a2 2 0 002 2z">
+                                </path>
+                            </svg></a><a><svg viewBox="0 0 24 24" class="_icon_1lgbkjk_3 _sizeM_1lgbkjk_17">
+                                <path d="M11.982 21.008a9 9 0 10-9-9 9.01 9.01 0 009 9zm0-16a7 7 0 010 14v-14z"></path>
+                            </svg></a></nav>
+                </header>
+            </div>
+            <main>
+                <div class="final-step">
+                    <section
+                        class="_card_156ep03_6 _themeLight_156ep03_40 _modeClassic_156ep03_59 _paddings24_156ep03_201 _bordersRadius8_156ep03_213 _cardPlain_156ep03_59 _withStaticBorder_156ep03_43 final-step__download-blurb">
+                        <h2 class="rs-h2 rs-h2_theme_light">Your Project is Ready to Go!</h2>
+                        <div>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-text-2_theme_light">Project
+                                <strong>ktor.zip</strong> download should start shortly.<br>If it does not, please, use
+                                the <a class="rs-link"
+                                    href="blob:https://start.ktor.io/bed93b1a-175e-4ffe-9a77-ed47a292f720"
+                                    download="ktor.zip">direct link</a>.</p>
+                        </div>
+                        <div>
+                            <p class="rs-text-2 rs-text-2_hardness_hard final-step__toolbar"><span
+                                    class="final-step__toolbar-item"><a
+                                        href="https://start.ktor.iosettings/?name=ktor&amp;website=com.example&amp;artifact=com.api.kotlin.ktor&amp;kotlinVersion=2.0.10&amp;ktorVersion=2.3.12&amp;buildSystem=GRADLE_KTS&amp;engine=NETTY&amp;configurationIn=CODE&amp;addSampleCode=true&amp;plugins=content-negotiation%2Crouting%2Cktor-jackson"
+                                        class="rs-link">Copy Link to Template</a><span role="button"
+                                        class="icon_rui_2d39 gray_rui_2d39 final-step__icon"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" viewBox="0 0 16 16" class="glyph_rui_2d39"
+                                            style="width: 14px; height: 14px;">
+                                            <path fill-rule="evenodd"
+                                                d="M11.6 2.25h-.626a2.022 2.022 0 0 0-.225-.013h-6.45A2.4 2.4 0 0 1 6.4 1h5.2A2.4 2.4 0 0 1 14 3.4v6.2a2.4 2.4 0 0 1-1.251 2.108V9.655l.001-.055V3.4a1.15 1.15 0 0 0-1.15-1.15ZM9.247 5.013H3.012a.75.75 0 0 0-.75.75v7.225c0 .414.336.75.75.75h6.235a.75.75 0 0 0 .75-.75V5.763a.75.75 0 0 0-.75-.75Zm-6.235-1.25a2 2 0 0 0-2 2v7.225a2 2 0 0 0 2 2h6.235a2 2 0 0 0 2-2V5.763a2 2 0 0 0-2-2H3.012Zm1 3.725a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5Zm.5 1.5a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3Zm-.5 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5Z"
+                                                clip-rule="evenodd"></path>
+                                        </svg></span></span><span class="final-step__toolbar-item"><a
+                                        href="https://ktor.io/docs/welcome.html" class="rs-link" target="_blank"
+                                        rel="noreferrer">View Docs and Tutorials</a></span></p>
+                        </div>
+                    </section>
+                    <section class="tutorial">
+                        <div>
+                            <h2 class="rs-h2">Getting Started with Ktor</h2>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Thank you for creating a Ktor
+                                project! Let’s see how to make use of it.</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">The goals of this document are
+                                to:</p>
+                            <ol class="rs-text-2 rs-text-2_hardness_hard rs-offset-left-12">
+                                <li>Describe in detail the steps you should follow to open and run your project.</li>
+                                <li>Provide a series of tasks you can attempt to familiarize yourself with Ktor.</li>
+                            </ol>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Unless explicitly stated we
+                                don’t assume you have changed any settings in the <a class="rs-link"
+                                    href="https://start.ktor.io/" target="_blank"
+                                    rel="noopener noreferrer nofollow">Ktor Project Generator</a>. Nor do we assume that
+                                you have added any optional plugins.</p>
+                            <h3 class="rs-h3">Unpacking and Running the Project on macOS</h3>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">This is the process to unpack,
+                                build and run the project from the command line on macOS. The descriptions below assume
+                                that:</p>
+                            <ol class="rs-text-2 rs-text-2_hardness_hard rs-offset-left-12">
+                                <li>You have created and downloaded a project called <em>ktor-sample-app</em>.</li>
+                                <li>This has been placed in a folder called <em>myprojects</em> in your home directory.
+                                </li>
+                            </ol>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Please alter the names and
+                                paths as required to match your own setup.</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">First, change your folder to
+                                <em>myprojects</em> in the home directory and unpack the archive created by the Ktor
+                                Project Generator:</p>
+                            <pre class="rs-pre"><code class="language-">tmp<span class="token operator">&gt;</span> cd ~<span class="token operator">/</span>myprojects
+myprojects<span class="token operator">&gt;</span> unzip ktor<span class="token operator">-</span>sample<span class="token operator">-</span>app<span class="token punctuation">.</span>zip <span class="token operator">-</span>d ktor<span class="token operator">-</span>sample<span class="token operator">-</span>app
+</code></pre>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Now, you can build and run the
+                                application from the project root:</p>
+                            <pre class="rs-pre"><code class="language-">myprojects<span class="token operator">&gt;</span> cd ktor<span class="token operator">-</span>sample<span class="token operator">-</span>app
+ktor<span class="token operator">-</span>sample<span class="token operator">-</span>app<span class="token operator">&gt;</span> <span class="token punctuation">.</span><span class="token operator">/</span>gradlew build
+ktor<span class="token operator">-</span>sample<span class="token operator">-</span>app<span class="token operator">&gt;</span> <span class="token punctuation">.</span><span class="token operator">/</span>gradlew run
+</code></pre>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">The output from the final
+                                command should look like this:</p>
+                            <pre class="rs-pre"><code class="language-">ktor<span class="token operator">-</span>sample<span class="token operator">-</span>app<span class="token operator">&gt;</span> Task <span class="token operator">:</span>run
+<span class="token number">2023</span><span class="token operator">-</span><span class="token number">07</span><span class="token operator">-</span><span class="token number">05</span> <span class="token number">16</span><span class="token operator">:</span><span class="token number">00</span><span class="token operator">:</span><span class="token number">51.735</span> <span class="token punctuation">[</span>main<span class="token punctuation">]</span> INFO ktor<span class="token punctuation">.</span>application <span class="token operator">-</span> Autoreload <span class="token keyword">is</span> disabled because the development mode <span class="token keyword">is</span> off<span class="token punctuation">.</span>
+<span class="token number">2023</span><span class="token operator">-</span><span class="token number">07</span><span class="token operator">-</span><span class="token number">05</span> <span class="token number">16</span><span class="token operator">:</span><span class="token number">00</span><span class="token operator">:</span><span class="token number">51.966</span> <span class="token punctuation">[</span>main<span class="token punctuation">]</span> INFO ktor<span class="token punctuation">.</span>application <span class="token operator">-</span> Application started <span class="token keyword">in</span> <span class="token number">0.256</span> seconds<span class="token punctuation">.</span>
+<span class="token number">2023</span><span class="token operator">-</span><span class="token number">07</span><span class="token operator">-</span><span class="token number">05</span> <span class="token number">16</span><span class="token operator">:</span><span class="token number">00</span><span class="token operator">:</span><span class="token number">52.094</span> <span class="token punctuation">[</span>DefaultDispatcher<span class="token operator">-</span>worker<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> INFO ktor<span class="token punctuation">.</span>application <span class="token operator">-</span> Responding at http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span><span class="token number">0.0</span><span class="token punctuation">.</span><span class="token number">0.0</span><span class="token operator">:</span><span class="token number">8080</span>
+<span class="token operator">&lt;=</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">--</span><span class="token operator">-&gt;</span> <span class="token number">80</span><span class="token operator">%</span> EXECUTING <span class="token punctuation">[</span>31s<span class="token punctuation">]</span>
+ktor<span class="token operator">-</span>sample<span class="token operator">-</span>app<span class="token operator">&gt;</span> <span class="token operator">:</span>run
+
+</code></pre>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">This shows us that the
+                                application has started successfully and is running on the current machine. You can
+                                verify the project is running by opening a browser at the URL mentioned in the output <a
+                                    class="rs-link" href="http://0.0.0.0:8080/" target="_blank"
+                                    rel="noopener noreferrer nofollow">http://0.0.0.0:8080</a>.</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">This is what you should see:
+                            </p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12"><img
+                                    src="./generator_files/HelloWorldKtor.png" alt="Hello World in Ktor"></p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Congratulations! You have
+                                successfully started your Ktor project.</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Note that the command line is
+                                unresponsive because the underlying process is busy running the Ktor application. You
+                                can type <code class="rs-code">CTRL-C</code> to cancel the application.</p>
+                            <h3 class="rs-h3">Unpacking and Running the Project on Windows</h3>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">This is the process to unpack,
+                                build and run the project from the command line on Windows. The descriptions below
+                                assume that:</p>
+                            <ol class="rs-text-2 rs-text-2_hardness_hard rs-offset-left-12">
+                                <li>You have created and downloaded a project called <em>ktor-sample-app</em>.</li>
+                                <li>This has been placed in a folder called <em>myprojects</em> in your home directory.
+                                </li>
+                            </ol>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Please alter the names and
+                                paths as required to match your own setup.</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Create a folder called
+                                <em>ktor-sample-app</em> in the current directory and unpack the archive created by the
+                                Ktor Project Generator into that folder:</p>
+                            <pre class="rs-pre"><code class="language-">myprojects<span class="token operator">&gt;</span> mkdir ktor<span class="token operator">-</span>sample<span class="token operator">-</span>app
+myprojects<span class="token operator">&gt;</span> tar <span class="token operator">-</span>xf ktor<span class="token operator">-</span>sample<span class="token operator">-</span>app<span class="token punctuation">.</span>zip <span class="token operator">-</span>C ktor<span class="token operator">-</span>sample<span class="token operator">-</span>app
+</code></pre>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Change into the new directory
+                                and build and run the application:</p>
+                            <pre class="rs-pre"><code class="language-">myprojects<span class="token operator">&gt;</span> cd ktor<span class="token operator">-</span>sample<span class="token operator">-</span>app
+ktor<span class="token operator">-</span>sample<span class="token operator">-</span>app<span class="token operator">&gt;</span> <span class="token punctuation">.</span>\gradlew<span class="token punctuation">.</span>bat build
+ktor<span class="token operator">-</span>sample<span class="token operator">-</span>app<span class="token operator">&gt;</span> <span class="token punctuation">.</span>\gradlew<span class="token punctuation">.</span>bat run
+</code></pre>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">The output from the final
+                                command should look like this:</p>
+                            <pre class="rs-pre"><code class="language-">ktor<span class="token operator">-</span>sample<span class="token operator">-</span>app<span class="token operator">&gt;</span> Task <span class="token operator">:</span>run
+<span class="token number">2023</span><span class="token operator">-</span><span class="token number">07</span><span class="token operator">-</span><span class="token number">05</span> <span class="token number">16</span><span class="token operator">:</span><span class="token number">00</span><span class="token operator">:</span><span class="token number">51.735</span> <span class="token punctuation">[</span>main<span class="token punctuation">]</span> INFO ktor<span class="token punctuation">.</span>application <span class="token operator">-</span> Autoreload <span class="token keyword">is</span> disabled because the development mode <span class="token keyword">is</span> off<span class="token punctuation">.</span>
+<span class="token number">2023</span><span class="token operator">-</span><span class="token number">07</span><span class="token operator">-</span><span class="token number">05</span> <span class="token number">16</span><span class="token operator">:</span><span class="token number">00</span><span class="token operator">:</span><span class="token number">51.966</span> <span class="token punctuation">[</span>main<span class="token punctuation">]</span> INFO ktor<span class="token punctuation">.</span>application <span class="token operator">-</span> Application started <span class="token keyword">in</span> <span class="token number">0.256</span> seconds<span class="token punctuation">.</span>
+<span class="token number">2023</span><span class="token operator">-</span><span class="token number">07</span><span class="token operator">-</span><span class="token number">05</span> <span class="token number">16</span><span class="token operator">:</span><span class="token number">00</span><span class="token operator">:</span><span class="token number">52.094</span> <span class="token punctuation">[</span>DefaultDispatcher<span class="token operator">-</span>worker<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> INFO ktor<span class="token punctuation">.</span>application <span class="token operator">-</span> Responding at http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span><span class="token number">127.0</span><span class="token punctuation">.</span><span class="token number">0.1</span><span class="token operator">:</span><span class="token number">8080</span>
+<span class="token operator">&lt;=</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">--</span><span class="token operator">-&gt;</span> <span class="token number">80</span><span class="token operator">%</span> EXECUTING <span class="token punctuation">[</span>31s<span class="token punctuation">]</span>
+ktor<span class="token operator">-</span>sample<span class="token operator">-</span>app<span class="token operator">&gt;</span> <span class="token operator">:</span>run
+</code></pre>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">This shows us that the
+                                application has started successfully and is running on the current machine. You can
+                                verify the project is running by opening a browser at the URL mentioned in the output <a
+                                    class="rs-link" href="http://127.0.0.1:8080/" target="_blank"
+                                    rel="noopener noreferrer nofollow">http://127.0.0.1:8080</a>.</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">This is what you should see:
+                            </p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12"><img
+                                    src="./generator_files/HelloWorldKtorWindows.png"
+                                    alt="Hello World in Ktor on Windows"></p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Congratulations! You have
+                                successfully started your Ktor project.</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Note that the command line is
+                                unresponsive because the underlying process is busy running the Ktor application. You
+                                can type <code class="rs-code">CTRL-C</code> to cancel the application.</p>
+                            <h3 class="rs-h3">Opening, Exploring and Running in IntelliJ IDEA</h3>
+                            <h4 class="rs-h4">Opening the project</h4>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">If you have IntelliJ IDEA
+                                installed you can easily open the project from the command line. Make sure you are in
+                                the project folder and then type the <code class="rs-code">idea</code> command, followed
+                                by a period to represent the current folder:</p>
+                            <pre class="rs-pre"><code class="language-">ktor<span class="token operator">-</span>sample<span class="token operator">-</span>app<span class="token operator">&gt;</span> idea <span class="token punctuation">.</span>
+</code></pre>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Alternatively you can launch
+                                <a class="rs-link" href="https://www.jetbrains.com/idea/" target="_blank"
+                                    rel="noopener noreferrer nofollow">IntelliJ IDEA</a> yourself and then select the
+                                <em>open</em> command, either from the Welcome Screen or from the File Menu. You can
+                                then navigate to the <em>ktor-sample-app</em> folder and select it. See the <a
+                                    class="rs-link"
+                                    href="https://www.jetbrains.com/help/idea/creating-and-managing-projects.html"
+                                    target="_blank" rel="noopener noreferrer nofollow">IntelliJ IDEA documentation</a>
+                                for more details on managing projects.</p>
+                            <h4 class="rs-h4">Exploring the project</h4>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Whichever option you choose,
+                                the project should open as shown below:</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12"><img
+                                    src="./generator_files/KtorProjectStructure.png" alt="Ktor Project Structure"></p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">In order to discuss the
+                                project layout we have expanded the structure in the Project View and selected the file
+                                <em>settings-gradle.kts</em>.</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">You will see that the code to
+                                run your application lives in packages under <em>src/main/kotlin</em>. The default
+                                package is called <em>com.example</em> and contains a subpackage called
+                                <em>plugins</em>. Two files have been created within these packages, named
+                                <em>Application.kt</em> and <em>Routing.kt</em>:</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12"><img
+                                    src="./generator_files/KtorProjectMainSourceSet.png"
+                                    alt="The Main Source Set in a Ktor Project"></p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">The name of the project is
+                                configured in <em>settings-gradle.kts</em>:</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12"><img
+                                    src="./generator_files/KtorProjectNameConfig.png"
+                                    alt="Configuring the Project Name"></p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Configuration files, and other
+                                kinds of content, live within the <em>src/main/resources</em> folder:</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12"><img
+                                    src="./generator_files/KtorProjectResources.png"
+                                    alt="Configuring the Project Resources"></p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">A skeleton test has been
+                                created in a package under <em>src/test/kotlin</em>:</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12"><img
+                                    src="./generator_files/KtorProjectSkeletonTest.png"
+                                    alt="The Skeleton Test in a Ktor Project"></p>
+                            <h4 class="rs-h4">Running the project</h4>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">To run the project from within
+                                IntelliJ IDEA:</p>
+                            <ol class="rs-text-2 rs-text-2_hardness_hard rs-offset-left-12">
+                                <li>Open the <a class="rs-link"
+                                        href="https://www.jetbrains.com/help/idea/jetgradle-tool-window.html"
+                                        target="_blank" rel="noopener noreferrer nofollow">Gradle Tool Window</a> by
+                                    clicking the Elephant Icon on the right hand sidebar.</li>
+                                <li>Within this tool window expand <em>Tasks</em> and <em>application</em>.</li>
+                                <li>Double click on the <em>run</em> task.</li>
+                            </ol>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Your Ktor application should
+                                start in a <a class="rs-link"
+                                    href="https://www.jetbrains.com/help/idea/run-tool-window.html" target="_blank"
+                                    rel="noopener noreferrer nofollow">Run Tool Window</a> at the bottom of the IDE:</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12"><img
+                                    src="./generator_files/KtorProjectRunning.png" alt="A Running Ktor Project"></p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">The same messages that we saw
+                                on the command line should appear in the window. Once again you can open your browser at
+                                the specified URL (<a class="rs-link" href="http://0.0.0.0:8080/" target="_blank"
+                                    rel="noopener noreferrer nofollow">http://0.0.0.0:8080</a>) and confirm that the
+                                project is running:</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12"><img
+                                    src="./generator_files/HelloWorldKtor.png" alt="Hello World in Ktor"></p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">You can manage the application
+                                via the Run Tool Window. Click on the red box to stop the application and the curved
+                                arrow to restart it. These options are explained further in <a class="rs-link"
+                                    href="https://www.jetbrains.com/help/idea/run-tool-window.html#run-toolbar"
+                                    target="_blank" rel="noopener noreferrer nofollow">the IntelliJ IDEA Run Tool Window
+                                    documentation</a>.</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Note that if you try to start
+                                a second copy of the application, whilst the first is already running, then the second
+                                will be unable to run. This is one of several common errors that developers encounter
+                                when beginning to write server-side code. <strong>You can find these errors, plus their
+                                    resolutions, explained in the Common Problems document.</strong></p>
+                            <h3 class="rs-h3">Additional Tasks to Attempt</h3>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Here are some additional tasks
+                                you may wish to try:</p>
+                            <ol class="rs-text-2 rs-text-2_hardness_hard rs-offset-left-12">
+                                <li>Changing the default port.</li>
+                                <li>Changing the port via YAML.</li>
+                                <li>Adding a new HTTP endpoint.</li>
+                                <li>Configuring static content.</li>
+                                <li>Writing an integration test.</li>
+                                <li>Registering error handlers.</li>
+                            </ol>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">These tasks do not depend on
+                                one another, but gradually increase in complexity. Attempting them in the order declared
+                                is the easiest way to learn incrementally. For simplicity, and to avoid duplication, the
+                                descriptions below assume you are attempting the tasks in order.</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Where coding is required we
+                                have specified both the code and the corresponding imports. The IDE may add some or all
+                                of these imports for you automatically.</p>
+                            <h4 class="rs-h4">1. Changing the Default Port</h4>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">In the Project View navigate
+                                to the <em>src/main/kotlin</em> folder and then into the single package that has been
+                                created for you. Open the <em>Application.kt</em> file. You should find code similar to
+                                the following:</p>
+                            <pre class="rs-pre"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">embeddedServer</span><span class="token punctuation">(</span>
+        Netty<span class="token punctuation">,</span> 
+        port <span class="token operator">=</span> <span class="token number">8080</span><span class="token punctuation">,</span> <span class="token comment">// This is the port on which Ktor is listening</span>
+        host <span class="token operator">=</span> <span class="token string-literal singleline"><span class="token string">"0.0.0.0"</span></span><span class="token punctuation">,</span> 
+        module <span class="token operator">=</span> Application<span class="token operator">::</span>module
+    <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span>wait <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">fun</span> Application<span class="token punctuation">.</span><span class="token function">module</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">configureRouting</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Switch the port number to
+                                another of your choosing, such as 9292. Restart the application.</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">You should now find that your
+                                application is running under the new port number. You can verify this in the browser, or
+                                by <a class="rs-link"
+                                    href="https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html#creating-http-request-files"
+                                    target="_blank" rel="noopener noreferrer nofollow">creating a new HTTP Request
+                                    file</a> in IntelliJ IDEA:</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12"><img
+                                    src="./generator_files/HttpRequestFilePart1.png" alt="An HTTP Request File"></p>
+                            <h4 class="rs-h4">2. Changing the Port via YAML</h4>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">When creating a new project in
+                                the Ktor Project Generator there is an option to store configuration externally, within
+                                either a YAML or a HOCON file:</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12"><img
+                                    src="./generator_files/KtorGeneratorExternalConfigOptions.png"
+                                    alt="Options In the Ktor Generator"></p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">If you had chosen to store
+                                configuration externally, then this would be the code in <em>Application.kt</em>:</p>
+                            <pre class="rs-pre"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span>args<span class="token operator">:</span> Array<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator">:</span> Unit <span class="token operator">=</span>
+io<span class="token punctuation">.</span>ktor<span class="token punctuation">.</span>server<span class="token punctuation">.</span>netty<span class="token punctuation">.</span>EngineMain<span class="token punctuation">.</span><span class="token function">main</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span>
+
+
+<span class="token annotation builtin">@Suppress</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"unused"</span></span><span class="token punctuation">)</span>
+<span class="token keyword">fun</span> Application<span class="token punctuation">.</span><span class="token function">module</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">configureRouting</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">These would be the values
+                                stored in the configuration file (YAML version):</p>
+                            <pre class="rs-pre"><code class="language-">ktor<span class="token operator">:</span>
+    application<span class="token operator">:</span>
+        modules<span class="token operator">:</span>
+            <span class="token operator">-</span> com<span class="token punctuation">.</span>example<span class="token punctuation">.</span>ApplicationKt<span class="token punctuation">.</span>module
+    deployment<span class="token operator">:</span>
+        port<span class="token operator">:</span> <span class="token number">8080</span>
+</code></pre>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">In this case you do not need
+                                to alter any code to change the port number. Simply alter the value in the YAML or HOCON
+                                file and restart the application. The change can be verified in the same way as with
+                                Task 1 above.</p>
+                            <h4 class="rs-h4">3. Adding a new HTTP Endpoint</h4>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Notice the call to
+                                configureRouting in the Application.kt file. Navigate to this function by using <a
+                                    class="rs-link"
+                                    href="https://www.jetbrains.com/help/idea/navigating-through-the-source-code.html#go_to_declaration"
+                                    target="_blank" rel="noopener noreferrer nofollow">the Go To Declaration
+                                    shortcut</a> or opening the file <em>Routing.kt</em> manually. This is the code you
+                                should see:</p>
+                            <pre class="rs-pre"><code class="language-kotlin"><span class="token keyword">fun</span> Application<span class="token punctuation">.</span><span class="token function">configureRouting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    routing <span class="token punctuation">{</span>
+        <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"/"</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            call<span class="token punctuation">.</span><span class="token function">respondText</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"Hello World!"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Insert the additional five
+                                lines of code shown below to create a new endpoint:</p>
+                            <pre class="rs-pre"><code class="language-kotlin"><span class="token keyword">fun</span> Application<span class="token punctuation">.</span><span class="token function">configureRouting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    routing <span class="token punctuation">{</span>
+        <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"/"</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            call<span class="token punctuation">.</span><span class="token function">respondText</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"Hello World!"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// Add the five lines below</span>
+        <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"/test1"</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">val</span> text <span class="token operator">=</span> <span class="token string-literal singleline"><span class="token string">"&lt;h1&gt;Hello From Ktor&lt;/h1&gt;"</span></span>
+            <span class="token keyword">val</span> type <span class="token operator">=</span> ContentType<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"text/html"</span></span><span class="token punctuation">)</span>
+            call<span class="token punctuation">.</span><span class="token function">respondText</span><span class="token punctuation">(</span>text<span class="token punctuation">,</span> type<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">In order to make use of
+                                <em>ContentType</em> the following import is required.</p>
+                            <pre class="rs-pre"><code class="language-kotlin"><span class="token keyword">import</span> io<span class="token punctuation">.</span>ktor<span class="token punctuation">.</span>http<span class="token punctuation">.</span><span class="token operator">*</span>
+</code></pre>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Note that the <em>/test1</em>
+                                URL can be whatever you like. Restart the application and request the new URL in the
+                                browser. The port number you should use will depend on whether you have attempted the
+                                first task. You should see the output displayed below:</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12"><img
+                                    src="./generator_files/HelloFromKtorInBrowser.png" alt="Hello From Ktor in Browser">
+                            </p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">If you have created an HTTP
+                                Request File you can also verify the new endpoint there:</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12"><img
+                                    src="./generator_files/HttpRequestFilePart2.png" alt="An HTTP Request File"></p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Note that a line containing
+                                three hashes is needed to separate different requests.</p>
+                            <h4 class="rs-h4">4. Configuring static content</h4>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Open the file
+                                <em>Routing.kt</em>, as in the previous task. Once again this should be the default
+                                content:</p>
+                            <pre class="rs-pre"><code class="language-kotlin"><span class="token keyword">fun</span> Application<span class="token punctuation">.</span><span class="token function">configureRouting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    routing <span class="token punctuation">{</span>
+        <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"/"</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            call<span class="token punctuation">.</span><span class="token function">respondText</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"Hello World!"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Add the following line to the
+                                routing section. For this task it does not matter whether or not you have inserted the
+                                content for the extra endpoint specified in task (2).</p>
+                            <pre class="rs-pre"><code class="language-kotlin"><span class="token keyword">fun</span> Application<span class="token punctuation">.</span><span class="token function">configureRouting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    routing <span class="token punctuation">{</span>
+        <span class="token comment">// Add the line below</span>
+        <span class="token function">staticResources</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"/content"</span></span><span class="token punctuation">,</span> <span class="token string-literal singleline"><span class="token string">"mycontent"</span></span><span class="token punctuation">)</span>
+
+
+        <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"/"</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            call<span class="token punctuation">.</span><span class="token function">respondText</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"Hello World!"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">The following import is
+                                required:</p>
+                            <pre class="rs-pre"><code class="language-kotlin"><span class="token keyword">import</span> io<span class="token punctuation">.</span>ktor<span class="token punctuation">.</span>server<span class="token punctuation">.</span>http<span class="token punctuation">.</span>content<span class="token punctuation">.</span><span class="token operator">*</span>
+</code></pre>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">The meaning of this line is as
+                                follows:</p>
+                            <ul>
+                                <li>
+                                    <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Invoking
+                                        <em>staticResources</em> tells Ktor that we want our application to be able to
+                                        provide standard website content, such as HTML and JavaScript files. Although
+                                        this content may be executed within the browser, it is considered static from
+                                        the server's point of view.</p>
+                                </li>
+                                <li>
+                                    <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">The URL
+                                        <em>/content</em> specifies the path that should be used to fetch this content.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">The path
+                                        <em>mycontent</em> is the name of the folder within which the static content
+                                        will live. Ktor will look for this folder within the <em>resources</em>
+                                        directory.</p>
+                                </li>
+                            </ul>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">In order to start serving this
+                                static content:</p>
+                            <ol class="rs-text-2 rs-text-2_hardness_hard rs-offset-left-12">
+                                <li>Right click on the <em>src/main/resources</em> folder within the project and create
+                                    a directory called <em>mycontent</em>. Note you could also have used the new items
+                                    shortcut.</li>
+                                <li>Within this folder right-click (or use the shortcut) and create a web page called
+                                    <em>sample.html</em>. Populate the page with some sample HTML tags.</li>
+                                <li>Restart the application.</li>
+                            </ol>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Your project should now look
+                                something like this:</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12"><img
+                                    src="./generator_files/KtorProjectWithStaticContent.png"
+                                    alt="The Ktor Project With Static Content"></p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">When you open your browser at
+                                <a class="rs-link" href="http://0.0.0.0:9292/content/sample.html" target="_blank"
+                                    rel="noopener noreferrer nofollow">http://0.0.0.0:9292/content/sample.html</a> the
+                                content of your sample page should be displayed:</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12"><img
+                                    src="./generator_files/SampleStaticContentInBrowser.png"
+                                    alt="The Static Content In The Browser"></p>
+                            <h4 class="rs-h4">5. Writing an integration test</h4>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Ktor provides support for
+                                creating integration tests, and the Project Generator creates a skeleton test file for
+                                you underneath <em>src/test/kotlin</em>. Assuming you have accepted the default settings
+                                the class will be called <em>ApplicationTest</em> and live in the package
+                                <em>com.example</em>.</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Open the class and add the
+                                code below:</p>
+                            <pre class="rs-pre"><code class="language-kotlin"><span class="token keyword">class</span> ApplicationTest <span class="token punctuation">{</span>
+    <span class="token annotation builtin">@Test</span>
+    <span class="token keyword">fun</span> <span class="token function">testRoot</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span> testApplication <span class="token punctuation">{</span>
+        application <span class="token punctuation">{</span>
+            <span class="token function">module</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+
+
+        <span class="token keyword">val</span> response <span class="token operator">=</span> client<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"/"</span></span><span class="token punctuation">)</span>
+        <span class="token function">assertEquals</span><span class="token punctuation">(</span>HttpStatusCode<span class="token punctuation">.</span>OK<span class="token punctuation">,</span> response<span class="token punctuation">.</span>status<span class="token punctuation">)</span>
+        <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"Hello World!"</span></span><span class="token punctuation">,</span> response<span class="token punctuation">.</span><span class="token function">bodyAsText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">The following imports are
+                                required:</p>
+                            <pre class="rs-pre"><code class="language-kotlin"><span class="token keyword">import</span> io<span class="token punctuation">.</span>ktor<span class="token punctuation">.</span>client<span class="token punctuation">.</span>request<span class="token punctuation">.</span><span class="token operator">*</span>
+<span class="token keyword">import</span> io<span class="token punctuation">.</span>ktor<span class="token punctuation">.</span>client<span class="token punctuation">.</span>statement<span class="token punctuation">.</span><span class="token operator">*</span>
+<span class="token keyword">import</span> io<span class="token punctuation">.</span>ktor<span class="token punctuation">.</span>http<span class="token punctuation">.</span><span class="token operator">*</span>
+<span class="token keyword">import</span> io<span class="token punctuation">.</span>ktor<span class="token punctuation">.</span>server<span class="token punctuation">.</span>testing<span class="token punctuation">.</span><span class="token operator">*</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>junit<span class="token punctuation">.</span>Assert<span class="token punctuation">.</span>assertEquals
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>junit<span class="token punctuation">.</span>Test
+</code></pre>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">The <code
+                                    class="rs-code">testApplication</code> method creates a new instance of Ktor. This
+                                instance is running inside a test environment, as opposed to a server like Netty.</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">We can then use the <code
+                                    class="rs-code">application</code> method to invoke the same setup functionality
+                                that is called from <code class="rs-code">embeddedServer</code>. Finally we can use the
+                                built-in <code class="rs-code">client</code> object and JUnit assertions to send a
+                                sample request and check the response.</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">The test can be run in <a
+                                    class="rs-link" href="https://www.jetbrains.com/help/idea/performing-tests.html"
+                                    target="_blank" rel="noopener noreferrer nofollow">any of the standard ways for
+                                    executing tests</a> in IntelliJ IDEA. Note that, because we are running a new
+                                instance of Ktor, the success or failure of the test does not depend on whether your
+                                application is running at 0.0.0.0.</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">If you have successfully
+                                completed task (2) then you should be able to add this additional test:</p>
+                            <pre class="rs-pre"><code class="language-kotlin"><span class="token annotation builtin">@Test</span>
+<span class="token keyword">fun</span> <span class="token function">testNewEndpoint</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span> testApplication <span class="token punctuation">{</span>
+    application <span class="token punctuation">{</span>
+        <span class="token function">module</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token keyword">val</span> response <span class="token operator">=</span> client<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"/test1"</span></span><span class="token punctuation">)</span>
+    <span class="token function">assertEquals</span><span class="token punctuation">(</span>HttpStatusCode<span class="token punctuation">.</span>OK<span class="token punctuation">,</span> response<span class="token punctuation">.</span>status<span class="token punctuation">)</span>
+    <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"html"</span></span><span class="token punctuation">,</span> response<span class="token punctuation">.</span><span class="token function">contentType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token punctuation">.</span>contentSubtype<span class="token punctuation">)</span>
+    <span class="token function">assertContains</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span><span class="token function">bodyAsText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string-literal singleline"><span class="token string">"Hello From Ktor"</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">The following additional
+                                import is required:</p>
+                            <pre class="rs-pre"><code class="language-kotlin"><span class="token keyword">import</span> kotlin<span class="token punctuation">.</span>test<span class="token punctuation">.</span>assertContains
+</code></pre>
+                            <h4 class="rs-h4">6. Registering error handlers</h4>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">We can handle errors in our
+                                Ktor application by using the <a class="rs-link"
+                                    href="https://ktor.io/docs/status-pages.html" target="_blank"
+                                    rel="noopener noreferrer nofollow">Status Pages plugin</a>. This plugin is not
+                                included in your project by default. We could have added it to our project via the
+                                Plugins section in the Ktor Project Generator, or the Project Wizard in IntelliJ IDEA.
+                                But for educational purposes we will add and configure the plugin ourselves.</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">There are four stages to the
+                                task</p>
+                            <ol class="rs-text-2 rs-text-2_hardness_hard rs-offset-left-12">
+                                <li>Add a new dependency in the Gradle build file.</li>
+                                <li>Install the plugin and specify an exception handler.</li>
+                                <li>Write sample code to trigger our handler.</li>
+                                <li>Restart and invoke our sample code.</li>
+                            </ol>
+                            <h5 class="rs-h4">1. Add the dependency</h5>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">In the dependencies section of
+                                <em>build.gradle.kts</em> add the extra dependency shown below:</p>
+                            <pre class="rs-pre"><code class="language-kotlin">dependencies <span class="token punctuation">{</span>
+    <span class="token comment">// Our new dependency to be added</span>
+    <span class="token function">implementation</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"io.ktor:ktor-server-status-pages:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$</span><span class="token expression">ktor_version</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+
+
+    <span class="token comment">// The existing dependencies</span>
+    <span class="token function">implementation</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"io.ktor:ktor-server-core-jvm:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$</span><span class="token expression">ktor_version</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+    <span class="token function">implementation</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"io.ktor:ktor-server-netty-jvm:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$</span><span class="token expression">ktor_version</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+    <span class="token function">implementation</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"ch.qos.logback:logback-classic:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$</span><span class="token expression">logback_version</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+    <span class="token function">testImplementation</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"io.ktor:ktor-server-tests-jvm:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$</span><span class="token expression">ktor_version</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+    <span class="token function">testImplementation</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"org.jetbrains.kotlin:kotlin-test-junit:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$</span><span class="token expression">kotlin_version</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">When you have done this you
+                                will need to <a class="rs-link"
+                                    href="https://www.jetbrains.com/help/idea/work-with-gradle-projects.html#gradle_refresh_project"
+                                    target="_blank" rel="noopener noreferrer nofollow">reload the project</a> to pick up
+                                this new dependency. The shortcut for this is <code class="rs-code">⇧⌘I</code> on MacOS
+                                and <code class="rs-code">Ctrl+Shift+O</code> on Windows.</p>
+                            <h5 class="rs-h4">2. Install the plugin and specify an exception handler</h5>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">In the <code
+                                    class="rs-code">configureRouting</code> method in <em>Routing.kt</em> add the
+                                following five lines of code:</p>
+                            <pre class="rs-pre"><code class="language-kotlin"><span class="token keyword">fun</span> Application<span class="token punctuation">.</span><span class="token function">configureRouting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//Add the five lines below</span>
+    <span class="token function">install</span><span class="token punctuation">(</span>StatusPages<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        exception<span class="token operator">&lt;</span>IllegalStateException<span class="token operator">&gt;</span> <span class="token punctuation">{</span> call<span class="token punctuation">,</span> cause <span class="token operator">-&gt;</span>
+            call<span class="token punctuation">.</span><span class="token function">respondText</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"App in illegal state as </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token expression">cause<span class="token punctuation">.</span>message</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+
+    routing <span class="token punctuation">{</span>
+        <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"/"</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            call<span class="token punctuation">.</span><span class="token function">respondText</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"Hello World!"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">The following import will be
+                                needed:</p>
+                            <pre class="rs-pre"><code class="language-kotlin"><span class="token keyword">import</span> io<span class="token punctuation">.</span>ktor<span class="token punctuation">.</span>server<span class="token punctuation">.</span>plugins<span class="token punctuation">.</span>statuspages<span class="token punctuation">.</span><span class="token operator">*</span>
+</code></pre>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">These lines install the Status
+                                Pages Plugin, and specify what actions to take when an exception of type <code
+                                    class="rs-code">IllegalStateException</code> is thrown. Note we should be setting an
+                                HTTP error code in the response, but we will omit this so that the output is displayed
+                                directly in the browser.</p>
+                            <h5 class="rs-h4">3. Write sample code to trigger our handler.</h5>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Staying within the <code
+                                    class="rs-code">configureRouting</code> method add the additional three lines shown
+                                below:</p>
+                            <pre class="rs-pre"><code class="language-kotlin"><span class="token keyword">fun</span> Application<span class="token punctuation">.</span><span class="token function">configureRouting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">install</span><span class="token punctuation">(</span>StatusPages<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        exception<span class="token operator">&lt;</span>IllegalStateException<span class="token operator">&gt;</span> <span class="token punctuation">{</span> call<span class="token punctuation">,</span> cause <span class="token operator">-&gt;</span>
+            call<span class="token punctuation">.</span><span class="token function">respondText</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"App in illegal state as </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token expression">cause<span class="token punctuation">.</span>message</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+
+    routing <span class="token punctuation">{</span>
+        <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"/"</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            call<span class="token punctuation">.</span><span class="token function">respondText</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"Hello World!"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">//Add the three lines below</span>
+        <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"/error-test"</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token function">IllegalStateException</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"Too Busy"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">You can see that we have added
+                                an endpoint with a URL of <em>/error-test</em>. When this endpoint is triggered we will
+                                throw an exception of the type used in our handler.</p>
+                            <h5 class="rs-h4">4. Restart and invoke our sample code.</h5>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12">Restart the application and,
+                                in your browser, navigate to the URL <a class="rs-link"
+                                    href="http://0.0.0.0:9292/error-test" target="_blank"
+                                    rel="noopener noreferrer nofollow">http://0.0.0.0:9292/error-test</a>. You should
+                                see that the error message is displayed, as shown below:</p>
+                            <p class="rs-text-2 rs-text-2_hardness_hard rs-offset-top-12"><img
+                                    src="./generator_files/ErrorMessageInBrowser.png"
+                                    alt="An Error Message Displayed In The Borwser"></p>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
