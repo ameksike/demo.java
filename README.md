@@ -19,3 +19,6 @@ This repository contains a list of demonstration applications. The demo applicat
 + [Core UI: Java library that implements a layer to manage graphic user interface components. ](https://github.com/ameksike/ksike.java.core.ui)
 + [Core Plugin: Java library that implements a layer to manage modules or plugin](https://github.com/ameksike/ksike.java.core.plugin)
 + [Core Security: Java library that implements a layer to manage security, implements patterns such as RBAC ](https://github.com/ameksike/ksike.java.core.security)
+
+### References
++ [Best Practices for Developing and Maintaining Spring Boot Applications](https://bhawana-gaur.medium.com/best-practices-for-developing-and-maintaining-spring-boot-applications-d96bb1816da6)
