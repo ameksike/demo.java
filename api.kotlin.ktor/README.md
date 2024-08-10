@@ -19,6 +19,7 @@ Change into the new directory and build and run the application:
 - ```cd api-kotlin-ktor```
 - ```.\gradlew.bat build```
 - ```.\gradlew.bat run```
+- ```./gradlew -t build -x test -i```
 
 The output from the final command should look like this:
 ```
@@ -172,6 +173,8 @@ In order to start serving this static content:
 
 ### Writing an integration test
 Ktor provides support for creating integration tests, and the Project Generator creates a skeleton test file for you underneath src/test/kotlin. Assuming you have accepted the default settings the class will be called ApplicationTest and live in the package com.example.
+
+- [Official Test Documentation](https://ktor.io/docs/server-testing.html#testing-ws)
 
 Open the class and add the code below:
 
