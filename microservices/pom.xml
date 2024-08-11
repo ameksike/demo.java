@@ -21,6 +21,7 @@
   <modules>
     <module>gateway</module>
     <module>eureka</module>
+    <module>config</module>
   </modules>
 
   <properties>
