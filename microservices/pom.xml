@@ -14,9 +14,13 @@
   <groupId>ksike.sw</groupId>
   <artifactId>microservices</artifactId>
   <version>1.0-SNAPSHOT</version>
-  
+
   <name>microservices</name>
   <packaging>pom</packaging>
+
+  <modules>
+    <module>gateway</module>
+  </modules>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
