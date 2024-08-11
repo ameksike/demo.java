@@ -20,6 +20,7 @@ Change into the new directory and build and run the application:
 - ```.\gradlew.bat build```
 - ```.\gradlew.bat run```
 - ```./gradlew -t build -x test -i```
+-  ```java -jar build\libs\com.api.kotlin.ktor-all.jar ```
 
 The output from the final command should look like this:
 ```

@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  ktor_app:
+    container_name: ktor-app
+    mem_limit: 512m
+    ports:
+      - "8083:8081"
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      DB_URL: jdbc:mysql://clinica_vet:3306/clinica_veterinaria?createDatabaseIfNotExist=true&serverTimezone=UTC
