@@ -2,6 +2,9 @@
 
 ![config](./rsc/config.jpg)
 
+### Service
+- http://localhost:8761
+
 ### Reference Documentation
 For further reference, please consider the following sections:
 
