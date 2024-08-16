@@ -13,15 +13,15 @@
 
 ### Servers
 - PostgreSQL
-    - **username:** postgres_user
-    - **password:** strongpassword
-    - **hostname:** postgres_db
+    - **username:** admin
+    - **password:** admin
+    - **hostname:** db_postgres
     - **database:** mydatabase
 
 - MySQL
-    - **username:** mysql_user
-    - **password:** strongpassword
-    - **hostname:** mysql_db
+    - **username:** admin
+    - **password:** admin
+    - **hostname:** db_mysql
     - **database:** mydatabase
 
 - Adminer
