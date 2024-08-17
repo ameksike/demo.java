@@ -1,5 +1,5 @@
 Server:
-    port: 8090
+    port: 9091
 
 spring:
     application:
@@ -8,9 +8,9 @@ spring:
         import: optional:configserver:http://localhost:8888
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://localhost:3306/studentdb
-        username: root
-        password: root
+        url: jdbc:mysql://localhost:3306/mydatabase
+        username: admin
+        password: admin
     jpa:
         hibernate:
             ddl-auto: create
