@@ -51,7 +51,7 @@
     - **url:** http://localhost:8080
     
 - Gateway
-    - **url:** http://localhost:8080
+    - **url:** http://localhost:9080
 
 - Student
     - **url:** http://localhost:9091
