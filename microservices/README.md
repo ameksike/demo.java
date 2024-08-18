@@ -12,6 +12,8 @@
 - **Stop:** docker-compose down
 - **Download dependencies**: mvn dependency:resolve
 - **Build without running test**: .\mvnw clean package -DskipTests
+- **Start Service db MySql**: docker-compose up -d db_mysql
+- **Start Service db PostgreSQL**: docker-compose up -d db_postgres
 
 - **Start Service Config**: docker-compose -f docker-compose.yml up -d srv_config
 - **Start Service Eureka**: docker-compose up -d srv_eureka
@@ -19,7 +21,6 @@
 - **Build Service Gateway**: docker-compose build --no-cache srv_gateway
 - **Stop Service Gateway**: docker-compose stop srv_gateway
 - **Logs Service Gateway**: docker logs microservices-srv-gateway-1 -f
-- **Start Service db Mysql**: docker-compose up -d db_mysql
 - **Start Service Student**: docker-compose up -d srv_student
 
 ### Servers

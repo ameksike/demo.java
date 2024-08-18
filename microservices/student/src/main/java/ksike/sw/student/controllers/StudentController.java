@@ -38,8 +38,8 @@ public class StudentController {
         return ResponseEntity.ok(this.studentService.findById(id));
     }
 
-    @GetMapping("/couse/{id}")
-    public ResponseEntity<?> findbyCourse(@PathVariable Long id){
+    @GetMapping("/course/{id}")
+    public ResponseEntity<?> findByCourse(@PathVariable Long id){
         return ResponseEntity.ok(this.studentService.findByIdCoure(id));
     }
 }
