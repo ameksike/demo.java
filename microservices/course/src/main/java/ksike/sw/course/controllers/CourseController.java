@@ -37,4 +37,10 @@ public class CourseController {
     public ResponseEntity<?> findById(@PathVariable Long id) {
         return ResponseEntity.ok(this.courseService.findById(id));
     }
+
+    @GetMapping("/summary/{id}")
+    public ResponseEntity<?> getMethodName(@PathVariable Long id) {
+        return ResponseEntity.ok(this.courseService.getSummary(id));
+    }
+    
 }
