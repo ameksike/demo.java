@@ -51,6 +51,74 @@ services:
       - srv_network
     restart: always
 
+  srv_config:
+    container_name: srv_config
+    image: srv_config:1.0.0
+    build: ./config/
+    ports:
+      - 8080:8080
+    networks:
+      - srv_network
+    restart: always
+
+  srv_eureka:
+    container_name: srv_eureka
+    image: srv_eureka:1.0.0
+    build: ./eureka/
+    ports:
+      - 8761:8761
+    networks:
+      - srv_network
+    restart: always
+
+  srv_gateway:
+    container_name: srv_gateway
+    image: srv_gateway:1.0.0
+    build: ./gateway/
+    ports:
+      - 8761:8761
+    networks:
+      - srv_network
+    restart: always
+
+  srv_student:
+    container_name: srv_student
+    image: srv_student:1.0.0
+    build: ./student/
+    ports:
+      - 9091:9091
+    environment:
+      - DATABASE_URL=jdbc:postgresql://java_db:5432/postgres
+      - DATABASE_USERNAME=postgres
+      - DATABASE_PASSWORD=postgres
+    depends_on:
+      - db_mysql
+      - srv_config
+      - srv_eureka
+      - srv_gateway
+    networks:
+      - srv_network
+    restart: always
+
+  srv_courses:
+    container_name: srv_courses
+    image: srv_courses:1.0.0
+    build: ./course/
+    ports:
+      - 9091:9091
+    environment:
+      - DATABASE_URL=jdbc:postgresql://java_db:5432/postgres
+      - DATABASE_USERNAME=postgres
+      - DATABASE_PASSWORD=postgres
+    depends_on:
+      - db_mysql
+      - srv_config
+      - srv_eureka
+      - srv_gateway
+    networks:
+      - srv_network
+    restart: always
+
 networks:
   srv_network:
     driver: bridge
