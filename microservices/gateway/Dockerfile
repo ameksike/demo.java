@@ -1,7 +1,8 @@
-FROM openjdk:22-jdk-alpine
+FROM openjdk:22-jdk-slim
 
-RUN addgroup -S spring && adduser -S spring -G spring
-USER spring:spring
+## RUN addgroup -S spring && adduser -S spring -G spring
+## USER spring:spring
+
 ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} app.jar
 

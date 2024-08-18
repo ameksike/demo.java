@@ -11,7 +11,16 @@
 - **Start:** docker-compose up -d
 - **Stop:** docker-compose down
 - **Download dependencies**: mvn dependency:resolve
+- **Build without running test**: .\mvnw clean package -DskipTests
 
+- **Start Service Config**: docker-compose -f docker-compose.yml up -d srv_config
+- **Start Service Eureka**: docker-compose up -d srv_eureka
+- **Start Service Gateway**: docker-compose up -d srv_gateway
+- **Build Service Gateway**: docker-compose build --no-cache srv_gateway
+- **Stop Service Gateway**: docker-compose stop srv_gateway
+- **Logs Service Gateway**: docker logs microservices-srv-gateway-1 -f
+- **Start Service db Mysql**: docker-compose up -d db_mysql
+- **Start Service Student**: docker-compose up -d srv_student
 
 ### Servers
 - PostgreSQL
@@ -43,4 +52,5 @@
 - [Configuring Maven](https://maven.apache.org/guides/mini/guide-configuring-maven.html)
 - [Downloading Apache Maven 3.9.8](https://maven.apache.org/download.cgi)
 - [Spring Boot version 3](https://www.youtube.com/watch?v=t0D4OPcugyI)
+- [Spring Boot with Docker](https://spring.io/guides/gs/spring-boot-docker)
 
