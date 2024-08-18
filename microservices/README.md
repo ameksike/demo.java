@@ -43,6 +43,21 @@
     - **username:** admin@example.com
     - **password:** strongpassword
 
+- Eureka
+    - **url:** http://localhost:8761
+    
+- Config
+    - **url:** http://localhost:8080
+    
+- Gateway
+    - **url:** http://localhost:8080
+
+- Student
+    - **url:** http://localhost:9091
+
+- Course
+    - **url:** http://localhost:9090
+
 ### Tools
 - [Online Spring Boot Banner Generator (with FIGlet Fonts)](https://devops.datenkollektiv.de/banner.txt/index.html)
 - [Start Spring](https://start.spring.io/)
