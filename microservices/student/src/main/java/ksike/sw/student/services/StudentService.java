@@ -6,13 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import ksike.sw.student.entities.Student;
-import ksike.sw.student.repository.StudentRepository;
+import ksike.sw.student.repository.IStudentRepository;
 
 @Service
 public class StudentService implements IStudentService {
 
     @Autowired
-    private StudentRepository studentRepository;
+    private IStudentRepository studentRepository;
 
     @Override
     public List<Student> findAll() {

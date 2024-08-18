@@ -13,8 +13,6 @@ import ksike.sw.student.services.IStudentService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-
 
 
 @RestController
@@ -38,5 +36,10 @@ public class StudentController {
     @GetMapping("/{id}")
     public ResponseEntity<?> findById(@PathVariable Long id) {
         return ResponseEntity.ok(this.studentService.findById(id));
+    }
+
+    @GetMapping("/couse/{id}")
+    public ResponseEntity<?> findbyCourse(@PathVariable Long id){
+        return ResponseEntity.ok(this.studentService.findByIdCoure(id));
     }
 }
