@@ -1,24 +1,5 @@
-server:
-  port: 9080
-
 spring:
   application:
     name: msvc-gateway
-
   config:
-    import: "optional:configserver:http://localhost:8888"
-
-  cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-      routes:
-        - id: students
-          uri: http://localhost:9091
-          predicates:
-            - Path=/api/student/**
-        - id: courses
-          uri: http://localhost:9090
-          predicates:
-            - Path=/api/courses/**
+    import: 'optional:configserver:http://localhost:8888'
