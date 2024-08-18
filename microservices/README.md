@@ -10,6 +10,8 @@
 ### Commands
 - **Start:** docker-compose up -d
 - **Stop:** docker-compose down
+- **Download dependencies**: mvn dependency:resolve
+
 
 ### Servers
 - PostgreSQL

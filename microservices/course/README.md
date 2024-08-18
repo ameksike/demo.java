@@ -5,6 +5,10 @@
 ### Reference Documentation
 For further reference, please consider the following sections:
 
+* [API Call: REST Clients](https://docs.spring.io/spring-framework/reference/integration/rest-clients.html) 
+* [API Call: Feign](https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-feign.html)
+* [API Call: RestTemplate](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html)
+* [Data: Lombok features](https://projectlombok.org/features/)
 * [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
 * [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/3.3.2/maven-plugin)
 * [Create an OCI image](https://docs.spring.io/spring-boot/3.3.2/maven-plugin/build-image.html)
