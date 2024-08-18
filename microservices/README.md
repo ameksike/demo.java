@@ -1,4 +1,7 @@
 
+
+![model](./rsc/model.jpg)
+
 ### Build 
 - mvn archetype:generate -DgroupId=ksike.sw -DartifactId=ms -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
 
