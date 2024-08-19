@@ -9,6 +9,8 @@
 - [Config](./config/README.md)
 - [Eureka](./eureka/README.md)
 - [Gateway](./gateway/README.md)
+- [Student](./student/README.md)
+- [Course](./course/README.md)
 
 ### Commands
 - **Start:** docker-compose up -d
