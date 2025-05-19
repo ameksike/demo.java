@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"  
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">  
+    <modelVersion>4.0.0</modelVersion>  
+  
+    <groupId>mdb.quickstart</groupId>  
+    <artifactId>java-quick-start</artifactId>  
+    <version>1.0-SNAPSHOT</version>  
+  
+    <properties>  
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  
+        <maven.compiler.source>21</maven.compiler.source>  
+        <maven.compiler.target>21</maven.compiler.target>  
+    </properties>  
+  
+    <dependencyManagement>  
+        <dependencies>  
+            <!-- MongoDB Driver BOM (Bill of Materials) -->  
+            <dependency>  
+                <groupId>org.mongodb</groupId>  
+                <artifactId>mongodb-driver-bom</artifactId>  
+                <version>5.5.0</version>  
+                <type>pom</type>  
+                <scope>import</scope>  
+            </dependency>  
+        </dependencies>  
+    </dependencyManagement>  
+  
+    <dependencies>  
+        <!-- MongoDB Driver Sync -->  
+        <dependency>  
+            <groupId>org.mongodb</groupId>  
+            <artifactId>mongodb-driver-sync</artifactId>  
+        </dependency>  
+        <!-- Optional: For native encryption or FLE -->  
+        <dependency>  
+            <groupId>org.mongodb</groupId>  
+            <artifactId>mongodb-crypt</artifactId>  
+        </dependency>  
+        <!-- Logging Framework -->  
+        <dependency>  
+            <groupId>ch.qos.logback</groupId>  
+            <artifactId>logback-classic</artifactId>  
+            <version>1.2.13</version>  
+        </dependency>  
+    </dependencies>  
+</project>  
